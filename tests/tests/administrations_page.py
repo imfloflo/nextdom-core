@@ -256,9 +256,9 @@ class AdministrationPages(BaseGuiTest):
         """Test history administration page
         """
         self.goto('index.php?v=d&p=history')
-        calc_history_input = self.get_element_by_id('in_calculHistory')
+        clear_graph_button = self.get_element_by_id('bt_clearGraph')
         back_button = self.get_link_by_title('Retour')
-        self.assertIsNotNone(calc_history_input)
+        self.assertIsNotNone(clear_graph_button)
         self.assertIsNotNone(back_button)
         self.assertEqual(0, len(self.get_js_logs()))
         back_button.click()
